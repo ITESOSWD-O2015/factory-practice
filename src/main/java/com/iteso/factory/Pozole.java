@@ -29,7 +29,9 @@ public abstract class Pozole {
         }
 
     }
+
+    public String getBroth(){return broth;}
     public String getName(){
-        return name;
+        return name + broth;
     }
 }

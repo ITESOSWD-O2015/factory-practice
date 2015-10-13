@@ -1,12 +1,13 @@
 package com.iteso.factory.condiment.caldos;
 
-import com.iteso.factory.CondimentsDecorator;
+import com.iteso.factory.BrothDecorator;
+import com.iteso.factory.MeatDecorator;
 import com.iteso.factory.Pozole;
 
 /**
  * Created by Sacrp on 10/13/15.
  */
-public class CaldoRojo extends CondimentsDecorator {
+public class CaldoRojo extends BrothDecorator {
 
     Pozole pozole;
 
@@ -14,9 +15,9 @@ public class CaldoRojo extends CondimentsDecorator {
         this.pozole = pozole;
     }
 
-    public String getName(){
-        return pozole.getName() + "con caldo rojo";
-    }
 
+    public String getBroth(){
+        return "con caldo blanco";
+    }
 
 }

@@ -1,12 +1,12 @@
 package com.iteso.factory.condiment.meat;
 
-import com.iteso.factory.CondimentsDecorator;
+import com.iteso.factory.MeatDecorator;
 import com.iteso.factory.Pozole;
 
 /**
  * Created by Sacrp on 10/13/15.
  */
-public class Cachete extends CondimentsDecorator {
+public class Cachete extends MeatDecorator {
 
     Pozole pozole;
 

@@ -1,12 +1,12 @@
 package com.iteso.factory.condiment.meat;
 
-import com.iteso.factory.CondimentsDecorator;
+import com.iteso.factory.MeatDecorator;
 import com.iteso.factory.Pozole;
 
 /**
  * Created by Sacrp on 10/13/15.
  */
-public class Oreja extends CondimentsDecorator {
+public class Oreja extends MeatDecorator {
 
     Pozole pozole;
 
