@@ -26,6 +26,5 @@ public class PozoleVerdeStore extends PozoleStore {
         else if (meat.equals("trompa"))
             return new PozoleVerdeTrompa();
         else return null;
-
     }
 }

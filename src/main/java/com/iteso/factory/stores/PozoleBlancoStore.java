@@ -5,25 +5,21 @@ import com.iteso.factory.PozoleStore;
 import com.iteso.factory.pozoles.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: rvillalobos
- * Date: 8/26/13
- * Time: 2:40 PM
- * To change this template use File | Settings | File Templates.
+ * Created by GeraCruz on 13/10/15.
  */
-public class PozoleRojoStore extends PozoleStore{
+public class PozoleBlancoStore extends PozoleStore{
     @Override
     protected Pozole createPozole(String meat) {
         if (meat.equals("pollo"))
-            return new PozoleRojoPollo();
+            return new PozoleBlancoPollo();
         else if (meat.equals("cachete") )
-            return new PozoleRojoCachete();
+            return new PozoleBlancoCachete();
         else if (meat.equals("oreja"))
-            return new PozoleRojoOreja();
+            return new PozoleBlancoOreja();
         else if (meat.equals("pierna") )
-            return new PozoleRojoPierna();
+            return new PozoleBlancoPierna();
         else if (meat.equals("trompa"))
-            return new PozoleRojoTrompa();
+            return new PozoleBlancoTrompa();
         else return null;
     }
 }
