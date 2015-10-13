@@ -9,14 +9,13 @@ import com.iteso.factory.Pozole;
  * Time: 2:39 PM
  * To change this template use File | Settings | File Templates.
  */
-public class PozoleBlancoCostilla extends Pozole{
-    public PozoleBlancoCostilla(){
-        name = "Pozole Blanco con costilla";
+public class PozolilloOreja extends Pozole{
+    public PozolilloOreja(){
+        name = "Pozillo con oreja";
         broth = "Caldo blanco";
-        toppings.add("Lechuga");
-        toppings.add("cebolla");
+        toppings.add("Oregano");
+        toppings.add("Col");
         toppings.add("Rabanos");
-        
 
     }
 }
