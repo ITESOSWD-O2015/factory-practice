@@ -18,6 +18,14 @@ public abstract class PozoleStore {
 
         return pozole;
     }
+    private String type;
+    public String getType(){
+        return type;
+    }
 
+    public void setter(String setType){
+        this.type = type;
+
+    }
     protected abstract Pozole createPozole(String meat);
 }
