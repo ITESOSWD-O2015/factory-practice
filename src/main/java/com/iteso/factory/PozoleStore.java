@@ -1,5 +1,7 @@
 package com.iteso.factory;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: rvillalobos
@@ -8,11 +10,10 @@ package com.iteso.factory;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class PozoleStore {
-    private String type = "Pozole Rojo";
-    public Pozole orderPozole(String meat){
+    public Pozole orderPozole(String meat, String broth){
         Pozole pozole;
 
-        pozole = createPozole(meat);
+        pozole = createPozole(meat, broth);
 
         pozole.prepare();
         pozole.serve();
@@ -20,13 +21,5 @@ public abstract class PozoleStore {
         return pozole;
     }
 
-    protected abstract Pozole createPozole(String meat);
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
+    protected abstract Pozole createPozole(String meat, String broth);
 }

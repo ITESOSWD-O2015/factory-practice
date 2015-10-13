@@ -10,9 +10,9 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Pozole {
-    public String name;
-    public String broth;
-    public ArrayList toppings = new ArrayList();
+    private String name;
+    private String broth;
+    private ArrayList toppings = new ArrayList();
 
 
     public void serve() {
@@ -20,16 +20,36 @@ public abstract class Pozole {
     }
 
     public void prepare() {
-        System.out.println("Preparing " + name);
+        System.out.println("Preparing " + getName());
         System.out.println("Adding corn kernels..." );
         System.out.println("Adding broth..." );
         System.out.println("Adding toppings:" );
-        for (int i = 0; i < toppings.size(); i++){
-            System.out.println("    " + toppings.get(i));
+        for (int i = 0; i < getToppings().size(); i++){
+            System.out.println("    " + getToppings().get(i));
         }
 
     }
     public String getName(){
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBroth() {
+        return broth;
+    }
+
+    public void setBroth(String broth) {
+        this.broth = broth;
+    }
+
+    public ArrayList getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(ArrayList toppings) {
+        this.toppings = toppings;
     }
 }
