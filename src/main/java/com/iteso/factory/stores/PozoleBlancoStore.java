@@ -10,7 +10,7 @@ import com.iteso.factory.pozoles.*;
 public class PozoleBlancoStore extends PozoleStore {
 
     @Override
-    protected Pozole createPozole(String meat) {
+    public Pozole createPozole(String meat) {
         if (meat.equals("pollo"))
             return new PozoleBlancoPollo();
         else if (meat.equals("cachete") )
