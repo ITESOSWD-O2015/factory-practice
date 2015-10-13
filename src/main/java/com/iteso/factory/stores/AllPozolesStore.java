@@ -37,7 +37,6 @@ public class AllPozolesStore extends PozoleStore{
             PozolilloStore pozolilloStore = new PozolilloStore();
             pozole = pozolilloStore.createPozole(meat);
         }
-
         return pozole;
     }
 }
