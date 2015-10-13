@@ -8,6 +8,8 @@ package com.iteso.factory;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class PozoleStore {
+    private String tipo;
+
     public Pozole orderPozole(String meat){
         Pozole pozole;
 
@@ -20,4 +22,12 @@ public abstract class PozoleStore {
     }
 
     protected abstract Pozole createPozole(String meat);
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
