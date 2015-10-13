@@ -7,23 +7,22 @@ import com.iteso.factory.PozoleStore;
  * Created by WolfBloodDude on 13/10/15.
  */
 public class AllPozolesStore extends PozoleStore {
-    PozoleStore pozoleStore;
-    Pozole pozole;
+    Pozole pozole = null;
 
     @Override
     protected Pozole createPozole(String meat) {
         if (getType().equals("Pozole Blanco")) {
-            pozoleStore = new PozoleBlancoStore();
-            pozole = pozoleStore.orderPozole(meat);
+            PozoleBlancoStore pozoleStore = new PozoleBlancoStore();
+            pozole = pozoleStore.createPozole(meat);
         } else if (getType().equals("Pozole Rojo")) {
-            pozoleStore = new PozoleRojoStore();
-            pozole = pozoleStore.orderPozole(meat);
+            PozoleRojoStore pozoleStore = new PozoleRojoStore();
+            pozole = pozoleStore.createPozole(meat);
         } else if (getType().equals("Pozole Verde")) {
-            pozoleStore = new PozoleVerdeStore();
-            pozole = pozoleStore.orderPozole(meat);
+            PozoleVerdeStore pozoleStore = new PozoleVerdeStore();
+            pozole = pozoleStore.createPozole(meat);
         } else if (getType().equals("Pozolillo")) {
-            pozoleStore = new PozolilloStore();
-            pozole = pozoleStore.orderPozole(meat);
+            PozolilloStore pozoleStore = new PozolilloStore();
+            pozole = pozoleStore.createPozole(meat);
         }
 
 
