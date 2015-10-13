@@ -12,19 +12,21 @@ public class AllPozolesStore extends PozoleStore {
 
     @Override
     protected Pozole createPozole(String meat) {
-        if(getType().equals("Pozole Blanco")) {
+        if (getType().equals("Pozole Blanco")) {
             pozoleStore = new PozoleBlancoStore();
-            pozoleStore.orderPozole(meat);
-        } else if(getType().equals("Pozole Rojo")) {
+            pozole = pozoleStore.orderPozole(meat);
+        } else if (getType().equals("Pozole Rojo")) {
             pozoleStore = new PozoleRojoStore();
-            pozoleStore.orderPozole(meat);
-        } else if(getType().equals("Pozole Verde")) {
+            pozole = pozoleStore.orderPozole(meat);
+        } else if (getType().equals("Pozole Verde")) {
             pozoleStore = new PozoleVerdeStore();
-            pozoleStore.orderPozole(meat);
-        } else if(getType().equals("Pozolillo")) {
+            pozole = pozoleStore.orderPozole(meat);
+        } else if (getType().equals("Pozolillo")) {
             pozoleStore = new PozolilloStore();
-            pozoleStore.orderPozole(meat);
+            pozole = pozoleStore.orderPozole(meat);
         }
+
+
         return pozole;
     }
 }
