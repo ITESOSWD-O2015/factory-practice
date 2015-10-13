@@ -13,6 +13,8 @@ public class PozoleVerdePollo extends Pozole{
     public PozoleVerdePollo(){
         name = "Pozole Verde con Pollo";
         broth = "Caldo Verde";
+        grano = "Grano de Pozole"; //add
+
         toppings.add("Cebolla");
         toppings.add("Lechuga");
         toppings.add("Rabanos");

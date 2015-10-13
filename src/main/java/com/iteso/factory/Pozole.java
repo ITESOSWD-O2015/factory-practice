@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public abstract class Pozole {
     public String name;
     public String broth;
+    public String grano; //agregados
     public ArrayList toppings = new ArrayList();
 
 

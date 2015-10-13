@@ -13,6 +13,8 @@ public class PozoleRojoTrompa extends Pozole{
     public PozoleRojoTrompa(){
         name = "Pozole Rojo con Trompa";
         broth = "Caldo Rojo";
+        grano = "Grano de Pozole"; //add
+
         toppings.add("Oregano");
         toppings.add("Col");
         toppings.add("Rabanos");
