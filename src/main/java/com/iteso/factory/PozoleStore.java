@@ -11,28 +11,17 @@ public abstract class PozoleStore {
 
     private String tipo = "pozole verde";
 
-
-
     public Pozole orderPozole(String meat){
         Pozole pozole;
-
-
         pozole = createPozole(meat);
-
         pozole.prepare();
         pozole.serve();
-
         return pozole;
     }
 
     protected abstract Pozole createPozole(String meat);
 
-    public String getTipo() {
+    public String getTipo() { return tipo; }
 
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+    public void setTipo(String tipo) {this.tipo = tipo; }
 }

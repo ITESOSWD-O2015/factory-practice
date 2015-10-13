@@ -19,7 +19,6 @@ public class AllPozolesStore extends PozoleStore{
     @Override
     protected Pozole createPozole(String meat) {
 
-
         if(getTipo().equals("pozole blanco")) {
             pozoleStore = new PozoleBlancoStore();
             pozole = pozoleStore.orderPozole(meat);
