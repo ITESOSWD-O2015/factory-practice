@@ -6,6 +6,7 @@ import com.iteso.factory.pozoles.Ingredientes.Caldo.Blanco;
 import com.iteso.factory.pozoles.Ingredientes.Caldo.Rojo;
 import com.iteso.factory.pozoles.Ingredientes.Caldo.Verde;
 import com.iteso.factory.pozoles.Ingredientes.Carne.*;
+import com.iteso.factory.pozoles.Ingredientes.Especias.*;
 import com.iteso.factory.pozoles.PozoleComun;
 
 /**
@@ -15,7 +16,7 @@ public class GeneralStore extends PozoleStore {
     Pozole pozole = new PozoleComun();
 
 
-    protected Pozole createPozole(String carne, String caldo) {
+    protected Pozole createPozole(String carne, String caldo, String especia) {
         if(caldo.equals("Blanco")) {
             pozole = new Blanco(pozole);
             if(carne.equals("Cachete")) {
@@ -28,6 +29,16 @@ public class GeneralStore extends PozoleStore {
                 pozole = new Pollo(pozole);
             } else if (carne.equals("Trompa")) {
                 pozole = new Trompa(pozole);
+            } else if (especia.equals("Cebolla")) {
+                pozole = new Cebolla(pozole);
+            }else if (especia.equals("Col")) {
+                pozole = new Col(pozole);
+            }else if (especia.equals("Lechuga")) {
+                pozole = new Lechuga(pozole);
+            }else if (especia.equals("Oregano")) {
+                pozole = new Oregano(pozole);
+            }else if (especia.equals("Rabano")) {
+                pozole = new Rabano(pozole);
             }
         }
         else if(caldo.equals("Verde")) {
@@ -42,6 +53,16 @@ public class GeneralStore extends PozoleStore {
                 pozole = new Pollo(pozole);
             } else if (carne.equals("Trompa")) {
                 pozole = new Trompa(pozole);
+            }else if (especia.equals("Cebolla")) {
+                pozole = new Cebolla(pozole);
+            }else if (especia.equals("Col")) {
+                pozole = new Col(pozole);
+            }else if (especia.equals("Lechuga")) {
+                pozole = new Lechuga(pozole);
+            }else if (especia.equals("Oregano")) {
+                pozole = new Oregano(pozole);
+            }else if (especia.equals("Rabano")) {
+                pozole = new Rabano(pozole);
             }
         }
         else if(caldo.equals("Rojo")) {
@@ -56,6 +77,16 @@ public class GeneralStore extends PozoleStore {
                 pozole = new Pollo(pozole);
             } else if (carne.equals("Trompa")) {
                 pozole = new Trompa(pozole);
+            }else if (especia.equals("Cebolla")) {
+                pozole = new Cebolla(pozole);
+            }else if (especia.equals("Col")) {
+                pozole = new Col(pozole);
+            }else if (especia.equals("Lechuga")) {
+                pozole = new Lechuga(pozole);
+            }else if (especia.equals("Oregano")) {
+                pozole = new Oregano(pozole);
+            }else if (especia.equals("Rabano")) {
+                pozole = new Rabano(pozole);
             }
         }
 

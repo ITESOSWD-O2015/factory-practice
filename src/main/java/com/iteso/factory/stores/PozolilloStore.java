@@ -5,6 +5,7 @@ import com.iteso.factory.PozoleStore;
 import com.iteso.factory.pozoles.Ingredientes.Caldo.Blanco;
 import com.iteso.factory.pozoles.Ingredientes.Caldo.Rojo;
 import com.iteso.factory.pozoles.Ingredientes.Carne.*;
+import com.iteso.factory.pozoles.Ingredientes.Especias.*;
 import com.iteso.factory.pozoles.Pozolillo;
 
 /**
@@ -14,7 +15,7 @@ public class PozolilloStore extends PozoleStore {
     Pozole pozole = new Pozolillo();
 
     @Override
-    protected Pozole createPozole(String carne, String caldo) {
+    protected Pozole createPozole(String carne, String caldo, String especia) {
         if (carne.equals("Cachete")) {
             pozole = new Cachete(pozole);
         } else if (carne.equals("Oreja")) {
@@ -31,6 +32,16 @@ public class PozolilloStore extends PozoleStore {
         }
         else if (caldo.equals("Rojo")) {
             pozole = new Rojo(pozole);
+        } else if (especia.equals("Cebolla")) {
+            pozole = new Cebolla(pozole);
+        }else if (especia.equals("Col")) {
+            pozole = new Col(pozole);
+        }else if (especia.equals("Lechuga")) {
+            pozole = new Lechuga(pozole);
+        }else if (especia.equals("Oregano")) {
+            pozole = new Oregano(pozole);
+        }else if (especia.equals("Rabano")) {
+            pozole = new Rabano(pozole);
         }
         return pozole;
     }

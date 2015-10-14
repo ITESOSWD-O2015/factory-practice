@@ -8,10 +8,10 @@ package com.iteso.factory;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class PozoleStore {
-    public Pozole orderPozole(String carne, String caldo){
+    public Pozole orderPozole(String carne, String caldo, String especia){
         Pozole pozole;
 
-        pozole = createPozole(carne, caldo);
+        pozole = createPozole(carne, caldo, especia);
 
         pozole.prepare();
         pozole.serve();
@@ -19,5 +19,5 @@ public abstract class PozoleStore {
         return pozole;
     }
 
-    protected abstract Pozole createPozole(String carne, String caldo);
+    protected abstract Pozole createPozole(String carne, String caldo, String especia);
 }
