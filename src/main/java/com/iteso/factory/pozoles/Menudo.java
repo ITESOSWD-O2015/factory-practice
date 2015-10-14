@@ -9,13 +9,7 @@ import com.iteso.factory.Pozole;
  * To change this template use File | Settings | File Templates.
  */
 public class Menudo extends Pozole {
-    public Menudo(){
-        name = "Menudo";
-        broth = "Caldo Rojo";
-        toppings.add("Oregano");
-        toppings.add("Col");
-        toppings.add("Rabanos");
-
+    public Menudo() {
+        setName("Menudo");
     }
-
 }

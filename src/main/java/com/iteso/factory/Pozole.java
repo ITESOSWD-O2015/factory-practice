@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 public abstract class Pozole {
     public String name;
-    public String broth;
-    public ArrayList toppings = new ArrayList();
+    public String caldo;
+    public ArrayList especias = new ArrayList();
 
 
     public void serve() {
@@ -24,12 +24,35 @@ public abstract class Pozole {
         System.out.println("Adding corn kernels..." );
         System.out.println("Adding broth..." );
         System.out.println("Adding toppings:" );
-        for (int i = 0; i < toppings.size(); i++){
-            System.out.println("    " + toppings.get(i));
+        for (int i = 0; i < especias.size(); i++){
+            System.out.println("    " + especias.get(i));
         }
 
     }
     public String getName(){
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCaldo() {
+        return caldo;
+    }
+
+    public void setCaldo(String caldo) {
+        this.caldo = caldo;
+    }
+
+    public ArrayList getEspecias() {
+        return especias;
+    }
+
+    public void setEspecias(ArrayList especias) {
+        this.especias = especias;
+    }
+
+
+
 }
