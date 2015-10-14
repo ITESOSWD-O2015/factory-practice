@@ -30,6 +30,6 @@ public abstract class Pozole {
 
     }
     public String getName(){
-        return name;
+        return name + "with" + broth + "broth";
     }
 }

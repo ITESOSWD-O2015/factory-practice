@@ -1,7 +1,6 @@
 package com.iteso.factory.stores;
 import com.iteso.factory.Pozole;
 import com.iteso.factory.PozoleStore;
-import com.iteso.factory.pozoles.Menudo;
 
 /**
  * Created with IntelliJ IDEA.
