@@ -9,13 +9,11 @@ import com.iteso.factory.Pozole;
 public class CaldoBlanco extends BrothDecorator {
 
     Pozole pozole;
-
     public CaldoBlanco(Pozole pozole){
         this.pozole = pozole;
     }
-
-    public String getBroth(){
-        return "con caldo blanco";
+    public String getName(){
+        return pozole.getName() + " y con caldo blanco";
     }
 
 

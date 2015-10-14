@@ -1,5 +1,7 @@
 import com.iteso.factory.PozoleStore;
 import com.iteso.factory.Pozole;
+import com.iteso.factory.pozoles.PozoleNormal;
+import com.iteso.factory.stores.AllPozolesStore;
 import com.iteso.factory.stores.MenudoStore;
 import com.iteso.factory.stores.PozoleRojoStore;
 import com.iteso.factory.stores.PozoleVerdeStore;
@@ -12,24 +14,45 @@ import com.iteso.factory.stores.PozoleVerdeStore;
  * To change this template use File | Settings | File Templates.
  */
 public class PozoleTestDrive {
+
+
+    private static String caldo_rojo    = "rojo";
+    private static String caldo_verde   = "verde";
+    private static String caldo_blanco  = "blanco";
+
+    private static String carne_pollo   = "pollo";
+    private static String carne_cachete = "cachete";
+    private static String carne_pierna  = "pierna";
+    private static String carne_trompa  = "trompa";
+    private static String carne_orjea   = "oreja";
+
+
+
     public static void main (String[] args){
-        PozoleStore verdeStore = new PozoleVerdeStore();
-        PozoleStore rojoStore = new PozoleRojoStore();
-        PozoleStore menuderia = new MenudoStore();
+        PozoleStore pozoleStore = new AllPozolesStore();
 
-        Pozole pozole = verdeStore.orderPozole("pollo");
-
-        System.out.println("First order is: "+ pozole.getName());
-        System.out.println();
-        System.out.println();
-        pozole = rojoStore.orderPozole("pollo");
-
-        System.out.println("Second order is: "+ pozole.getName());
+        Pozole pozole1 = pozoleStore.orderPozole(carne_pollo, caldo_rojo);
+        System.out.println("First order is: "+ pozole1.getName());
         System.out.println();
         System.out.println();
 
-        pozole = menuderia.orderPozole("pollo");
+        Pozole pozole2 = pozoleStore.orderPozole(carne_cachete, caldo_blanco);
+        System.out.println("Second order is: "+ pozole2.getName());
+        System.out.println();
+        System.out.println();
 
-        System.out.println("Third order is: "+ pozole.getName());
+        Pozole pozole3 = pozoleStore.orderPozole(carne_trompa, caldo_verde);
+        System.out.println("Third order is: "+ pozole3.getName());
+        System.out.println();
+        System.out.println();
+
+
+
+
+
+
+
+
+
     }
 }

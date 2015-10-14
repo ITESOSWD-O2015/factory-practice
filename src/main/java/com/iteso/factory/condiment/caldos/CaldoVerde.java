@@ -16,8 +16,8 @@ public class CaldoVerde extends BrothDecorator {
     }
 
 
-    public String getBroth(){
-        return "con caldo blanco";
+    public String getName(){
+        return pozole.getName() + " y con caldo verde";
     }
 
 }

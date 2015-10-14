@@ -9,19 +9,13 @@ package com.iteso.factory;
  */
 public abstract class PozoleStore {
 
-    private String tipo = "pozole verde";
-
-    public Pozole orderPozole(String meat){
+    public Pozole orderPozole(String meat, String broth){
         Pozole pozole;
-        pozole = createPozole(meat);
+        pozole = createPozole(meat, broth);
         pozole.prepare();
         pozole.serve();
         return pozole;
     }
 
-    protected abstract Pozole createPozole(String meat);
-
-    public String getTipo() { return tipo; }
-
-    public void setTipo(String tipo) {this.tipo = tipo; }
+    protected abstract Pozole createPozole(String meat, String broth);
 }

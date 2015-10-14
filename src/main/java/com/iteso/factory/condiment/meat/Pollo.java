@@ -9,11 +9,7 @@ import com.iteso.factory.Pozole;
 public class Pollo extends MeatDecorator {
 
     Pozole pozole;
-
-    public  Pollo(Pozole pozole){
-        this.pozole = pozole;
-    }
-
+    public Pollo(Pozole pozole) {this.pozole = pozole;}
     public String getName(){
         return pozole.getName() + "con pollo";
     }

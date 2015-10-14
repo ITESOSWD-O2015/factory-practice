@@ -9,11 +9,7 @@ import com.iteso.factory.Pozole;
 public class Cachete extends MeatDecorator {
 
     Pozole pozole;
-
-    public  Cachete(Pozole pozole){
-        this.pozole = pozole;
-    }
-
+    public Cachete(Pozole pozole) {this.pozole = pozole;}
     public String getName(){
         return pozole.getName() + "con cachete";
     }

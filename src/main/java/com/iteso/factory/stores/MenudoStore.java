@@ -12,9 +12,11 @@ import com.iteso.factory.pozoles.Menudo;
  */
 public class MenudoStore extends PozoleStore {
 
+
+
     @Override
-    protected Pozole createPozole(String meat) {
-        Pozole pozole = new Menudo();
-        return pozole;  //To change body of implemented methods use File | Settings | File Templates.
+    protected Pozole createPozole(String meat, String Broth) {
+        Pozole menudo = new Menudo();
+        return menudo;
     }
 }

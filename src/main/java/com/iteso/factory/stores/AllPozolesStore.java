@@ -2,6 +2,7 @@ package com.iteso.factory.stores;
 
 import com.iteso.factory.Pozole;
 import com.iteso.factory.PozoleStore;
+import com.iteso.factory.condiment.caldos.*;
 import com.iteso.factory.pozoles.*;
 
 /**
@@ -13,29 +14,34 @@ import com.iteso.factory.pozoles.*;
  */
 public class AllPozolesStore extends PozoleStore{
 
-    Pozole pozole;
+    Pozole pozole = new PozoleNormal();
+
 
     @Override
-    protected Pozole createPozole(String meat) {
+    protected Pozole createPozole(String meat, String broth) {
 
-        if(getTipo().equals("pozole blanco")) {
+        if(broth.equals("blanco")) {
             PozoleBlancoStore pozoleBlancoStore = new PozoleBlancoStore();
-            pozole = pozoleBlancoStore.createPozole(meat);
+            pozole = pozoleBlancoStore.createPozole(meat, broth);
+            pozole = new CaldoBlanco(pozole);
         }
 
-        if(getTipo().equals("pozole rojo")) {
+        if(broth.equals("rojo")) {
             PozoleRojoStore pozoleRojoStore = new PozoleRojoStore();
-            pozole = pozoleRojoStore.createPozole(meat);
+            pozole = pozoleRojoStore.createPozole(meat, broth );
+            pozole = new CaldoRojo(pozole);
         }
 
-        if(getTipo().equals("pozole verde")) {
+        if(broth.equals("verde")) {
             PozoleVerdeStore pozoleVerdeStore = new PozoleVerdeStore();
-            pozole = pozoleVerdeStore.createPozole(meat);
+            pozole = pozoleVerdeStore.createPozole(meat, broth);
+            pozole = new CaldoVerde(pozole);
         }
 
-        if(getTipo().equals("pozolillo")) {
+        if(broth.equals("pozolillo")) {
             PozolilloStore pozolilloStore = new PozolilloStore();
-            pozole = pozolilloStore.createPozole(meat);
+            pozole = pozolilloStore.createPozole(meat, broth);
+            pozole = new CaldoVerde(pozole);
         }
         return pozole;
     }

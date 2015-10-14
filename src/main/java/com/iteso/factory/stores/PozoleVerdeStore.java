@@ -2,6 +2,10 @@ package com.iteso.factory.stores;
 
 import com.iteso.factory.Pozole;
 import com.iteso.factory.PozoleStore;
+import com.iteso.factory.condiment.caldos.CaldoBlanco;
+import com.iteso.factory.condiment.caldos.CaldoRojo;
+import com.iteso.factory.condiment.caldos.CaldoVerde;
+import com.iteso.factory.condiment.meat.*;
 import com.iteso.factory.pozoles.*;
 
 /**
@@ -13,19 +17,26 @@ import com.iteso.factory.pozoles.*;
  */
 public class PozoleVerdeStore extends PozoleStore {
 
+    Pozole pozole = new PozoleNormal();
+
+
     @Override
-    protected Pozole createPozole(String meat) {
+    protected Pozole createPozole(String meat, String broth) {
+
+        //pozole = new CaldoVerde(pozole);
+
         if (meat.equals("pollo"))
-            return new PozoleVerdePollo();
-        else if (meat.equals("cachete") )
-            return new PozoleVerdeCachete();
+            pozole = new Pollo(pozole);
+        else if (meat.equals("cachete"))
+            pozole = new Cachete(pozole);
         else if (meat.equals("oreja"))
-            return new PozoleVerdeOreja();
-        else if (meat.equals("pierna") )
-            return new PozoleVerdePierna();
+            pozole = new Oreja(pozole);
+        else if (meat.equals("pierna"))
+            pozole = new Pierna(pozole);
         else if (meat.equals("trompa"))
-            return new PozoleVerdeTrompa();
+            pozole = new Trompa(pozole);
         else return null;
 
+        return pozole;
     }
 }

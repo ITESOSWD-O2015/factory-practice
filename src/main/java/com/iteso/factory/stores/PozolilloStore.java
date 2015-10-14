@@ -13,7 +13,7 @@ import com.iteso.factory.pozoles.*;
  */
 public class PozolilloStore extends PozoleStore{
     @Override
-    protected Pozole createPozole(String meat) {
+    protected Pozole createPozole(String meat, String Broth) {
         if (meat.equals("pollo"))
             return new PozolilloPollo();
         else if (meat.equals("cachete") )

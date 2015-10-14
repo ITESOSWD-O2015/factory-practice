@@ -15,11 +15,11 @@ public abstract class Pozole {
     public ArrayList toppings = new ArrayList();
 
 
-    public void serve() {
+   public void serve() {
         System.out.println("Serving..." );
     }
 
-    public void prepare() {
+  public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Adding corn kernels..." );
         System.out.println("Adding broth..." );
@@ -30,8 +30,9 @@ public abstract class Pozole {
 
     }
 
-    public String getBroth(){return broth;}
     public String getName(){
-        return name + broth;
+        return name;  }
+    public void setName(String name) {
+        this.name = name;
     }
 }
